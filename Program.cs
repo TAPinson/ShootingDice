@@ -60,6 +60,15 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+            SoreLoserPlayer Trump = new SoreLoserPlayer()
+            {
+                Name = "Donald J. Trump"
+            };
+
+            Trump.Play(player1);
+
+            Console.WriteLine("-------------------");
+
             List<Player> players = new List<Player>() {
                 player1, player2, player3, large, smackTalker, playerPlusOne
             };
