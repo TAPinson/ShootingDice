@@ -32,8 +32,36 @@ namespace ShootingDice
 
             Console.WriteLine("-------------------");
 
+            SmackTalkingPlayer smackTalker = new SmackTalkingPlayer();
+            smackTalker.Name = "DiceGOAT";
+            smackTalker.Taunt = "My rolls go higher than SpaceX!";
+            smackTalker.Play(player1);
+
+            Console.WriteLine("-------------------");
+
+            OneHigherPlayer playerPlusOne = new OneHigherPlayer();
+            playerPlusOne.Name = "playerPlusOne";
+            playerPlusOne.Play(player1);
+
+            Console.WriteLine("-------------------");
+
+            HumanPlayer playerIsHuman = new HumanPlayer();
+            playerIsHuman.Name = "Ted 'The Human' Johnson";
+            playerIsHuman.Play(player1);
+
+            Console.WriteLine("-------------------");
+
+            CreativeSmackTalkingPlayer CreativeGuy = new CreativeSmackTalkingPlayer()
+            {
+                Name = "CreativeGuy"
+            };
+
+            CreativeGuy.Play(player1);
+
+            Console.WriteLine("-------------------");
+
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large
+                player1, player2, player3, large, smackTalker, playerPlusOne
             };
 
             PlayMany(players);
