@@ -55,7 +55,6 @@ namespace ShootingDice
             {
                 Name = "CreativeGuy"
             };
-
             CreativeGuy.Play(player1);
 
             Console.WriteLine("-------------------");
@@ -64,13 +63,28 @@ namespace ShootingDice
             {
                 Name = "Donald J. Trump"
             };
-
             Trump.Play(player1);
 
             Console.WriteLine("-------------------");
 
+            UpperHalfPlayer LoadedDice = new UpperHalfPlayer()
+            {
+                Name = "Lodi"
+            };
+            LoadedDice.Play(player1);
+
+            Console.WriteLine("-------------------");
+
+            SoreLoserUpperHalfPlayer cheatingLoser = new SoreLoserUpperHalfPlayer()
+            {
+                Name = "Rudy"
+            };
+            cheatingLoser.Play(player1);
+
+            Console.WriteLine("-------------------");
+
             List<Player> players = new List<Player>() {
-                player1, player2, player3, large, smackTalker, playerPlusOne
+                player1, player2, player3, large, smackTalker, playerPlusOne, CreativeGuy, Trump, LoadedDice, cheatingLoser
             };
 
             PlayMany(players);
